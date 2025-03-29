@@ -1,4 +1,4 @@
-//> using file Main.scala
+//> using file "../../Main.scala"
 //> using test.dep org.scalacheck::scalacheck:0.17.0
 //> using test.dep org.scalameta::munit-scalacheck:1.1.0
 

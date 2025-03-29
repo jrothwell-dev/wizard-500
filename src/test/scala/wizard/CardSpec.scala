@@ -1,4 +1,4 @@
-//> using file Main.scala
+//> using file "../../Main.scala"
 //> using test.dep org.scalameta::munit:1.1.0
 
 package wizard.domain
