@@ -1,5 +1,5 @@
 //> using file Main.scala
-//> using test.dep org.scalacheck::scalacheck:1.17.0
+//> using test.dep org.scalacheck::scalacheck:0.17.0
 //> using test.dep org.scalameta::munit-scalacheck:1.1.0
 
 package wizard.domain
@@ -16,7 +16,7 @@ class GamePropertySpec extends munit.ScalaCheckSuite:
         Player("2", "Charlie", WizardClass.Geomancer),
         Player("3", "Diana", WizardClass.Aeromancer)
       )
-      
+
       val deck = Card.createWizardDeck()
       val round = Round(
         players = players,
@@ -25,6 +25,6 @@ class GamePropertySpec extends munit.ScalaCheckSuite:
         trump = None,
         deck = deck
       ).deal
-      
+
       round.players.forall(_.hand.size == cardsPerPlayer)
     }

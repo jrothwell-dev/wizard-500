@@ -7,11 +7,11 @@ class CardSpec extends munit.FunSuite:
   test("Standard deck should have 52 cards"):
     val deck = Card.createStandardDeck()
     assertEquals(deck.size, 52)
-  
+
   test("Wizard deck should have correct number of cards"):
     val deck = Card.createWizardDeck(wizardCount = 4, jesterCount = 4)
     assertEquals(deck.size, 60) // 52 standard + 4 wizards + 4 jesters
-  
+
   test("Cards should have correct point values"):
     assertEquals(StandardCard(Suit.Hearts, Rank.Five).points, 5)
     assertEquals(StandardCard(Suit.Clubs, Rank.Ten).points, 10)
