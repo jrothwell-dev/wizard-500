@@ -19,15 +19,11 @@ jobs:
     - name: Install Scala CLI
       run: |
         curl -sSLf https://scala-cli.virtuslab.org/get | sh
-        echo "$HOME/.scala-cli/bin" >> $GITHUB_PATH
-        # Make scala-cli available in this step
-        export PATH="$HOME/.scala-cli/bin:$PATH"
     - name: Run tests
       run: |
-        # Ensure scala-cli is in the PATH
-        export PATH="$HOME/.scala-cli/bin:$PATH" 
-        scala-cli test .
+        # Use the full path to the scala-cli executable
+        $HOME/.scala-cli/bin/scala-cli test .
     - name: Compile
       run: |
-        export PATH="$HOME/.scala-cli/bin:$PATH"
-        scala-cli compile .
+        # Use the full path to the scala-cli executable
+        $HOME/.scala-cli/bin/scala-cli compile .
