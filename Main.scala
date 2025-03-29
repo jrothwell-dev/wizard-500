@@ -9,5 +9,4 @@
 //> using dep org.openjfx:javafx-media:24
 //> using dep org.scalameta::munit:1.1.0
 
-// For now, let's use a simple main function until we create our app structure
 @main def hello = println("Hello, Wizard 500!")
