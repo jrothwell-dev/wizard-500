@@ -1,0 +1,30 @@
+echo "# Scala-specific
+*.class
+*.log
+*.metals
+.bloop/
+.bsp/
+.scala-build/
+.metals/
+metals.sbt
+.vscode/
+
+# macOS
+.DS_Store
+
+# ScalaFX/JavaFX
+dependency-reduced-pom.xml
+
+# Build files
+target/
+project/target/
+project/project/target/
+
+# Temporary files
+tmp/
+temp/
+
+# IDE specific files
+.idea/
+*.iml
+.scala-build/" > .gitignore
